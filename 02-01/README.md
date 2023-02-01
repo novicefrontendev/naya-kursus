@@ -1,3 +1,7 @@
+MINGGU 3 ( DAY - 1 )
+
+Mempelajari Git dengan Github.
+
 Kegunaan Git :
 - Untuk distribusi source code.
 - Versioning Control -> Memanage perubahan-perubahan yang terjadi di dalam source code, baik kembali versi yang lama atau yang lebih baru.
