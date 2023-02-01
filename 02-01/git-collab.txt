@@ -1,0 +1,22 @@
+Git Branch
+- Membuat branch -> git branch nama branch
+Pindah branch ke branch yang udah kita buat -> git checkout nama branch
+
+Tinggal push 
+- git add .
+- git commit
+
+Walaupun sudah di commit di branch baru ketika kembali ke branch master lalu di git log perubahan di branch baru tidak terlihat termasuk file di branch baru.
+Bisa dimasukkan ke master dengan merge, tetapi harus di branch tujuan terlebih dahulu
+
+push branch baru 
+- git checkout nama_branch_baru
+- git push origin nama_branch_baru
+
+rebase sama kayak merge
+
+membuat branch gak harus mulai dari master
+merge belok belok historynya ketika di git log
+sementara rebase lurus historynya ketika di git log
+
+source : https://hastebin.com/rojunujuno.sql

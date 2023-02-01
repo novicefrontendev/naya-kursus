@@ -1,0 +1,14 @@
+table, th, td {
+    border:1px solid black;
+  }
+
+.Foto {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.Foto h1 {
+    display: grid;
+    justify-content: center;
+}

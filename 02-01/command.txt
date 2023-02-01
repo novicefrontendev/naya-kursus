@@ -1,0 +1,670 @@
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git init
+Initialized empty Git repository in /home/rahadian/Documents/coba-git/coba-git-lagi/.git/
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	git-naya.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   git-naya.txt
+
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git config --global user.email testingerkamv2@gmail.com
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+fatal: your current branch 'master' does not have any commits yet
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit -m 'initial commit'
+[master (root-commit) 84de763] initial commit
+ 1 file changed, 17 insertions(+)
+ create mode 100644 git-naya.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 84de76320c40c2d4b8f65ccdda6352a0865a3398 (HEAD -> master)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 11:27:49 2023 +0700
+
+    initial commit
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git remote add origin https://github.com/novicefrontendev/coba-git-naya.git
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git remote -v
+origin	https://github.com/novicefrontendev/coba-git-naya.git (fetch)
+origin	https://github.com/novicefrontendev/coba-git-naya.git (push)
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git push origin master
+Username for 'https://github.com': ^C
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git remote remove origin
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git remote add origin git@github.com:novicefrontendev/coba-git-naya.git
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git push origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 504 bytes | 504.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:novicefrontendev/coba-git-naya.git
+ * [new branch]      master -> master
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 672 bytes | 224.00 KiB/s, done.
+From github.com:novicefrontendev/coba-git-naya
+ * branch            master     -> FETCH_HEAD
+   84de763..48e9485  master     -> origin/master
+Updating 84de763..48e9485
+Fast-forward
+ tambah.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 tambah.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96 (HEAD -> master, origin/master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+
+commit 84de76320c40c2d4b8f65ccdda6352a0865a3398
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 11:27:49 2023 +0700
+
+    initial commit
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   edit.txt
+
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit -m 'nambah edit.txt'
+[master 4f5d605] nambah edit.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 edit.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git remote -v
+origin	git@github.com:novicefrontendev/coba-git-naya.git (fetch)
+origin	git@github.com:novicefrontendev/coba-git-naya.git (push)
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 284 bytes | 284.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To github.com:novicefrontendev/coba-git-naya.git
+   48e9485..4f5d605  master -> master
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+Unpacking objects: 100% (3/3), 939 bytes | 313.00 KiB/s, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+From github.com:novicefrontendev/coba-git-naya
+ * branch            master     -> FETCH_HEAD
+   4f5d605..1637122  master     -> origin/master
+Updating 4f5d605..1637122
+Fast-forward
+ index.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 index.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git pull origin master
+From github.com:novicefrontendev/coba-git-naya
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+* master
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+* master
+  navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout navbar
+Switched to branch 'navbar'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch navbar
+fatal: A branch named 'navbar' already exists.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+  master
+* navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ mkdir git-branch
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ cd git-branch
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git status
+On branch navbar
+nothing to commit, working tree clean
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git commit -m 'branch-navbar'
+On branch navbar
+nothing to commit, working tree clean
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git status
+On branch navbar
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   index.html
+
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git commit -m 'branch-navbar'
+[navbar 69fdd2d] branch-navbar
+ 1 file changed, 13 insertions(+)
+ create mode 100644 git-branch/index.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git log
+commit 69fdd2d87890313f3675cc2cda9c21ba2bdb3f0c (HEAD -> navbar)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:28:29 2023 +0700
+
+    branch-navbar
+
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (origin/master, master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git log --oneline
+69fdd2d (HEAD -> navbar) branch-navbar
+1637122 (origin/master, master) Create index.html
+4f5d605 nambah edit.txt
+48e9485 Create tambah.txt
+84de763 initial commit
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git check out master
+git: 'check' is not a git command. See 'git --help'.
+
+The most similar command is
+	checkout
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git checkout master
+Switched to branch 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ git log
+fatal: Unable to read current working directory: No such file or directory
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi/git-branch$ cd ..
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (HEAD -> master, origin/master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+
+commit 84de76320c40c2d4b8f65ccdda6352a0865a3398
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 11:27:49 2023 +0700
+
+    initial commit
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch login
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch 
+  login
+* master
+  navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout login
+Switched to branch 'login'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch 
+* login
+  master
+  navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ touch index.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit -m 'branch-login'
+On branch login
+nothing to commit, working tree clean
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (HEAD -> login, origin/master, master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+
+commit 84de76320c40c2d4b8f65ccdda6352a0865a3398
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 11:27:49 2023 +0700
+
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout master
+Switched to branch 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ ls
+edit.txt  git-naya.txt  index.html  tambah.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (HEAD -> master, origin/master, login)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+
+commit 84de76320c40c2d4b8f65ccdda6352a0865a3398
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 11:27:49 2023 +0700
+
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout login
+Switched to branch 'login'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ touch about.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit 'add about hmtl'
+error: pathspec 'add about hmtl' did not match any file(s) known to git
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit -m 'add about hmtl'
+[login fdaffdf] add about hmtl
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 about.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit fdaffdf5efb07bdaf3c255da24d21f970fefdc5a (HEAD -> login)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:37:53 2023 +0700
+
+    add about hmtl
+
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (origin/master, master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout master
+Switched to branch 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (HEAD -> master, origin/master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+
+commit 84de76320c40c2d4b8f65ccdda6352a0865a3398
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 11:27:49 2023 +0700
+
+    initial commit
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ ls
+edit.txt  git-naya.txt  index.html  tambah.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch 
+  login
+* master
+  navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git merge navbar
+Updating 1637122..69fdd2d
+Fast-forward
+ git-branch/index.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 git-branch/index.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 69fdd2d87890313f3675cc2cda9c21ba2bdb3f0c (HEAD -> master, navbar)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:28:29 2023 +0700
+
+    branch-navbar
+
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (origin/master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git merge login
+Merge made by the 'recursive' strategy.
+ about.html | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 about.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit e568c771bc0f1363e316f612018662ada17512cd (HEAD -> master)
+Merge: 69fdd2d fdaffdf
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:46:53 2023 +0700
+
+    Merge branch 'login'
+
+commit fdaffdf5efb07bdaf3c255da24d21f970fefdc5a (login)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:37:53 2023 +0700
+
+    add about hmtl
+
+commit 69fdd2d87890313f3675cc2cda9c21ba2bdb3f0c (navbar)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:28:29 2023 +0700
+
+    branch-navbar
+
+commit 163712210c65f61bb3cca6b90e91f893be4cb270 (origin/master)
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+  login
+* master
+  navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git push origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 778 bytes | 778.00 KiB/s, done.
+Total 8 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), done.
+To github.com:novicefrontendev/coba-git-naya.git
+   1637122..e568c77  master -> master
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout login
+Switched to branch 'login'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git push origin login
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'login' on GitHub by visiting:
+remote:      https://github.com/novicefrontendev/coba-git-naya/pull/new/login
+remote: 
+To github.com:novicefrontendev/coba-git-naya.git
+ * [new branch]      login -> login
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout navbar
+Switched to branch 'navbar'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git push origin navbar
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'navbar' on GitHub by visiting:
+remote:      https://github.com/novicefrontendev/coba-git-naya/pull/new/navbar
+remote: 
+To github.com:novicefrontendev/coba-git-naya.git
+ * [new branch]      navbar -> navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+  login
+  master
+* navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch footer
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+  footer
+  login
+  master
+* navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout footer
+Switched to branch 'footer'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ touch footer.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit -m 'add footer'
+[footer d7d5f2b] add footer
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 footer.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout master
+Switched to branch 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase footer
+First, rewinding head to replay your work on top of it...
+Applying: add about hmtl
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit ae5384e84e3cb94019da1d857f441e5d9231b8d9 (HEAD -> master)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:37:53 2023 +0700
+
+    add about hmtl
+
+commit d7d5f2b1ac74d6c60a25c87e489dbc6abb26a3d8 (footer)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 15:10:37 2023 +0700
+
+    add footer
+
+commit 69fdd2d87890313f3675cc2cda9c21ba2bdb3f0c (origin/navbar, navbar)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:28:29 2023 +0700
+
+    branch-navbar
+
+commit 163712210c65f61bb3cca6b90e91f893be4cb270
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+  footer
+  login
+* master
+  navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase footer
+Current branch master is up to date.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout navbar
+Switched to branch 'navbar'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase footer
+First, rewinding head to replay your work on top of it...
+Fast-forwarded navbar to footer.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase footer
+Current branch navbar is up to date.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout master
+Switched to branch 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase navbar
+Current branch master is up to date.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase footer
+Current branch master is up to date.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch container
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch
+  container
+  footer
+  login
+* master
+  navbar
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout container
+Switched to branch 'container'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ touch container.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit -m 'add container'
+On branch container
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	container.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout master
+Switched to branch 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase container
+Current branch master is up to date.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout container
+Switched to branch 'container'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git add .
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git commit -m 'add container'
+[container 30823f7] add container
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 container.html
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout master
+Switched to branch 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git rebase container
+First, rewinding head to replay your work on top of it...
+Fast-forwarded master to container.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log --oneline --graph
+* 30823f7 (HEAD -> master, container) add container
+* ae5384e add about hmtl
+* d7d5f2b (navbar, footer) add footer
+* 69fdd2d (origin/navbar) branch-navbar
+* 1637122 Create index.html
+* 4f5d605 nambah edit.txt
+* 48e9485 Create tambah.txt
+* 84de763 initial commit
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git merge navbar
+Already up to date.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git merge login
+Merge made by the 'recursive' strategy.
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log --oneline --graph
+*   1c1a81c (HEAD -> master) Merge branch 'login'
+|\  
+| * fdaffdf (origin/login, login) add about hmtl
+* | 30823f7 (container) add container
+* | ae5384e add about hmtl
+* | d7d5f2b (navbar, footer) add footer
+* | 69fdd2d (origin/navbar) branch-navbar
+|/  
+* 1637122 Create index.html
+* 4f5d605 nambah edit.txt
+* 48e9485 Create tambah.txt
+* 84de763 initial commit
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout master
+Already on 'master'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout navbar
+Switched to branch 'navbar'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git branch images master
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout images
+Switched to branch 'images'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit 1c1a81c0901b958dcedd50b0b4fb277e8d4e7f8f (HEAD -> images, master)
+Merge: 30823f7 fdaffdf
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 15:20:41 2023 +0700
+
+    Merge branch 'login'
+
+commit 30823f73121e3dc4316723e16d28ff6c1b6c3756 (container)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 15:15:57 2023 +0700
+
+    add container
+
+commit ae5384e84e3cb94019da1d857f441e5d9231b8d9
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:37:53 2023 +0700
+
+    add about hmtl
+
+commit d7d5f2b1ac74d6c60a25c87e489dbc6abb26a3d8 (navbar, footer)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 15:10:37 2023 +0700
+
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git checkout -b submenu footer
+Switched to a new branch 'submenu'
+rahadian@rahadian-X456UR:~/Documents/coba-git/coba-git-lagi$ git log
+commit d7d5f2b1ac74d6c60a25c87e489dbc6abb26a3d8 (HEAD -> submenu, navbar, footer)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 15:10:37 2023 +0700
+
+    add footer
+
+commit 69fdd2d87890313f3675cc2cda9c21ba2bdb3f0c (origin/navbar)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:28:29 2023 +0700
+
+    branch-navbar
+
+commit 163712210c65f61bb3cca6b90e91f893be4cb270
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+:...skipping...
+commit d7d5f2b1ac74d6c60a25c87e489dbc6abb26a3d8 (HEAD -> submenu, navbar, footer)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 15:10:37 2023 +0700
+
+    add footer
+
+commit 69fdd2d87890313f3675cc2cda9c21ba2bdb3f0c (origin/navbar)
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 14:28:29 2023 +0700
+
+    branch-navbar
+
+commit 163712210c65f61bb3cca6b90e91f893be4cb270
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:21:17 2023 +0700
+
+    Create index.html
+
+commit 4f5d6050ba888eb3eaa8c6df53669b891ded3298
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 12:18:35 2023 +0700
+
+    nambah edit.txt
+
+commit 48e94850ece1cd8a50e2b9c0c6af5722e4a9ca96
+Author: novicefrontendev <123918091+novicefrontendev@users.noreply.github.com>
+Date:   Mon Jan 30 12:09:26 2023 +0700
+
+    Create tambah.txt
+
+commit 84de76320c40c2d4b8f65ccdda6352a0865a3398
+Author: adlihardiyanto <testingerkamv2@gmail.com>
+Date:   Mon Jan 30 11:27:49 2023 +0700
+
+    initial commit
+~
+~
+~
+~
+~

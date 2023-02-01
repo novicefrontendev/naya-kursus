@@ -1,0 +1,58 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Merriweather', serif;
+}
+
+
+ul {
+    display: flex;
+    background-color: #D9D9D9;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.logo {
+    padding-right: 250px;
+}
+
+.navbar-menu {
+    padding-right: 89px;
+}
+
+.container {
+    height: 460px;
+}
+
+.text {
+    text-align: center;
+}
+
+.sum-cont {
+    width: 800px;
+    text-align: justify;
+    padding-left: 200px;
+}
+
+.footer {
+    background-color: #D9D9D9;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 35px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.p-footer {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}

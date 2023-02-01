@@ -1,0 +1,14 @@
+table, th, td {
+    border:1px solid black;
+  }
+
+.Table-Nilai {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.Table-Nilai h1 {
+    display: grid;
+    justify-content: center;
+}
