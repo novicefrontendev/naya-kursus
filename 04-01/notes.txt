@@ -21,6 +21,6 @@ if (false) {
 
 2. Switch-case -> seperti saklar
 Jika satu kondisi memenuhi, maka kondisi di bawahnya juga akan ikut seperti efek domino.
-Break -> untuk langsung lompat ke penutup kurawal.
+Break -> untuk langsung lompat ke penutup kurawal dan lanjut di bawahnya.
 
 Titik koma untuk memisahkan eksekusi kode.
