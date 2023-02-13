@@ -95,8 +95,9 @@ let sum_even_numbers = function () {
 }
 console.log(sum_even_numbers());
 
+// Function tidak bisa digunakan untuk menyebutkan rentang nilai tertentu tanpa array karena cuma bisa return 1 nilai
+
 let numbers = function () {
-    let sum = 0;
     for (let i = -10; i < 10; i += 2) {
         console.log(i)
     }
