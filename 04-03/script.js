@@ -4,8 +4,7 @@ function luasPersegiPanjang (panjang, lebar) {
     if (typeof panjang != 'number') throw 'x harus number';
     if (typeof lebar !='number') throw 'x harus number';
 
-    let hasil = panjang * lebar;
-    return hasil // Langsung Rumus aja
+    return panjang * lebar;
 }
 
 let luas = luasPersegiPanjang(5, 10)
@@ -14,8 +13,7 @@ console.log(luas);
 function luasPersegi (sisi) {
     if (typeof sisi != 'number') throw 'x harus number';
 
-    let hasilPersegi = sisi ** 2;
-    return hasilPersegi
+    return sisi ** 2;
 }
 
 let luasPP = luasPersegi(10)
@@ -24,8 +22,7 @@ console.log(luasPP);
 function luasLingkaran (radius) {
     if (typeof radius != 'number') throw 'x harus number';
 
-    let hasilLingkaran = 22/7 * radius ** 2;
-    return hasilLingkaran
+    return 22/7 * radius ** 2;
 }
 
 let luasLngkrn = luasLingkaran(7)
