@@ -64,7 +64,7 @@ console.log(gradeNilai(90));
 // For
 let sum_numbers = function () {
     let sum = 0;
-    for (let i = -10; i < 10; i += 2) {
+    for (let i = -10; i < 10; i += 1) {
         sum += i;
     }
     return sum;
@@ -74,8 +74,10 @@ console.log(sum_numbers());
 
 let sum_odd_numbers = function () {
     let sum = 0;
-    for (let i = -10; i < 10; i += 2) {
-        console.log(i)
+    for (let i = -10; i < 10; i += 1) {
+        if ( i % 2 != 0) {
+            sum += i;
+        }
     }
     return sum;
 }
@@ -83,7 +85,7 @@ console.log(sum_odd_numbers());
 
 let sum_even_numbers = function () {
     let sum = 0;
-    for (let i = -10; i <= 10; i += 1) {
+    for (let i = -10; i <= 10; i += 2) {
         if ( i % 2 == 0) {
             sum += i;
         }
@@ -91,6 +93,7 @@ let sum_even_numbers = function () {
     return sum;
 }
 console.log(sum_even_numbers());
+
 
 // Function tidak bisa digunakan untuk menyebutkan rentang nilai tertentu tanpa array karena cuma bisa return 1 nilai
 
