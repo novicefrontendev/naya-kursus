@@ -4,9 +4,12 @@ Operator : Untuk memanipulasi data
 
 Jenis-jenis Operator :
 - Aritmatika : +, -, *, /, ** (pangkat), %(modulo) -> sisa bagi (1%2 = 1)
-- Assignment : =, +=, -=, *=, /=, **=, %= -> Untuk mengubah jika sudah punya nilai atau mengisi nilai jika belum punya, hasilnya perubahan nilai.
-    let a = 1
-    a = a + 10 -> a += 10
+- Assignment : =, +=, -=, *=, /=, **=, %= 
+    Untuk mengubah jika sudah punya nilai atau mengisi nilai. 
+    <!-- Jika belum punya, hasilnya perubahan nilai. -->
+    Contoh assignment :
+        - let a = 1
+        - a = a + 10 -> a += 10
 
     let a = 1
     a += 1 -> a ++;

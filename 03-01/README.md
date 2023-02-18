@@ -32,18 +32,20 @@ Push an existing repository from the command line
 - git pull origin master (di directory project yang sama)
 
 
-coba asal git status tanpa git init
+Coba asal git status tanpa git init -> You will get an error!
 
-versioning 
+Versioning 
 - git checkout -"commit hash"
 
-perubahan
+Perubahan file
 - git add .
 - git commit -m
 - git push
 
-origin & master cuma nama
-directory = umum
-repository = spesifik
+Origin & Master cuma nama aja bisa diubah
 
-repository dibuat di dalam directory.
+Perbedaan directory dan repository :
+- directory = umum, parent
+- repository = spesifik, child
+
+Repository dibuat di dalam directory.
