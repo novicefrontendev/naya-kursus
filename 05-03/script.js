@@ -36,18 +36,6 @@ const hasKey = (objectName, keyName) => {
 
 console.log(hasKey(biodataPemain, 'age'));
 
-// Cara Simple
-const validasiKey5 = (objectName, keyName) => {
-    if(objectName[keyName]){
-        return 'Ada Kok'
-    }
-    else{
-        return 'Gak Ada'
-    }
-}
-
-console.log(validasiKey5(biodataPemain, 'negara'));
-
 
 // Soal No. 2 -> Menjumlahkan value di object tetapi hanya yang number
 const angka = {
@@ -64,3 +52,23 @@ for (let key in angka) {
 }
 
 console.log(sum)
+
+// Alternatif
+// Langkah Pertama mengubah object menjadi key/value array
+const asArray = Object.values(angka)
+console.log(asArray)
+// Melakukan filter berdasarkan tipe data
+const filteredArray = asArray.filter(value => typeof value === 'number')
+console.log(filteredArray)
+// Menghitung array
+let acc = 0;
+for (let i = 0; i < filteredArray.length; i++) {
+    acc = acc + filteredArray[i]
+}
+
+console.log(acc)
+
+
+
+
+
