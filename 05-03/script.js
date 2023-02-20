@@ -68,6 +68,8 @@ for (let i = 0; i < filteredArray.length; i++) {
 
 console.log(acc)
 
+// obj[key] -> Mengecek array true atau false bukan ada isinya apa enggak key
+
 
 
 
