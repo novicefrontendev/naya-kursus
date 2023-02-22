@@ -13,9 +13,9 @@ class BangunDatar {
     }
 }
 
-const BgnDtr = new BangunDatar(5)
-console.log(BgnDtr.keliling())
-console.log(BgnDtr.luas())
+const bgnDtr = new BangunDatar('5')
+console.log(`Keliling Bangun Datar adalah ${bgnDtr.keliling()}`)
+console.log(`Luas Bangun Datar adalah ${bgnDtr.luas()}`)
 
 class Segitiga extends BangunDatar {
     // constructor
@@ -34,9 +34,9 @@ class Segitiga extends BangunDatar {
     }
 }
 
-const Sgtg = new Segitiga(2, 4, 8)
-console.log(Sgtg.keliling())
-console.log(Sgtg.luas())
+const Sgtg = new Segitiga(0, 2, 8)
+console.log(`Keliling Segitiga adalah ${Sgtg.keliling()}`)
+console.log(`Luas Segitiga adalah ${Sgtg.luas()}`)
 
 
 class Persegi extends BangunDatar {
@@ -53,8 +53,8 @@ class Persegi extends BangunDatar {
 }
 
 const Psg = new Persegi(6)
-console.log(Psg.keliling());
-console.log(Psg.luas());
+console.log(`Keliling Persegi adalah ${Psg.keliling()}`);
+console.log(`Luas Persegi adalah ${Psg.luas()}`);
 
 
 class PersegiPanjang extends BangunDatar {
@@ -73,24 +73,36 @@ class PersegiPanjang extends BangunDatar {
 }
 
 const PsgPjg = new PersegiPanjang(18, 10)
-console.log(PsgPjg.keliling())
-console.log(PsgPjg.luas())
+console.log(`Keliling Persegi Panjang adalah ${PsgPjg.keliling()}`)
+console.log(`Luas Persegi Panjang adalah ${PsgPjg.luas()}`)
 
 
 class Lingkaran extends BangunDatar {
-    constructor(radius) {
-        super(sisi)
-        // this.sisi = sisi
+    constructor(sisi) {
+        super(sisi) // super()
+        this.radius = sisi
+        this.sisi = sisi
     }
 
+    // setRadius() {
+    //     this.phi = 22/7
+    //     return this.phi
+    // }
+
+    // keliling () {
+    //     return this.setRadius() * 2 * this.radius
+    // }
+    
     keliling () {
-        return 22/7 * 2 * this.sisi
+        return 22/7 * 2 * this.radius
     }
+
     luas () {
-        return 22/7 * this.sisi ** 2
+        return 22/7 * this.radius ** 2
     }
 }
 
 const Lngkrn = new Lingkaran(7)
-console.log(Lngkrn.keliling())
-console.log(Lngkrn.luas())
+console.log(Lngkrn)
+console.log(`Keliling Lingkaran adalah ${Lngkrn.keliling()}`)
+console.log(`Luas Lingkaran adalah ${Lngkrn.luas()}`)
