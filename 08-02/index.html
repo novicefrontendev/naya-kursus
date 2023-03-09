@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Search Box <input type="number" id="key">
+        <button id="sb">Search</button>
+    </div>
+    <script>
+        let numbers = [10, 20, 30, 40, 50];
+        let keys = document.getElementById('key')
+        let button = document.getElementById('sb');
+
+        function searchFun() {
+            if (numbers.indexOf(Number(keys.value)) == -1) {
+                document.write(keys.value + " <b>Not Found</b>")
+            } 
+            else {
+                document.write("<b>Element Found at " + ' ' + numbers.indexOf(Number(keys.value)) + " Position</b>"  )
+            }
+        }
+
+        button.addEventListener('click', searchFun)
+    </script>
+</body>
+</html>

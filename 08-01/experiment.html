@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part 2</title>
+</head>
+<body>
+    </script>
+    <button>Mulai</button>
+    <span id="countdowntimer">...</span>
+    <progress value="0" max="10" id="progressBar"></progress>
+    <h2 id="end"></h2>
+
+    <script>
+        const button = document.querySelector('button')
+        button.addEventListener('click', () => {
+            var timeleft = 11;
+            var downloadTimer = setInterval(function(){
+            timeleft--;
+            document.getElementById("countdowntimer").textContent = timeleft;
+            document.getElementById("progressBar").value = 10 - timeleft;
+            if(timeleft < 1) {
+                clearInterval(downloadTimer);
+            }
+            console.log(timeleft)
+            if (timeleft === 0) {
+                let span = document.querySelector('span');
+                button.style = 'display : none';
+                span.style = 'display : none';
+                let progressBar = document.getElementById("progressBar");
+                progressBar.style = 'display : none';
+                document.getElementById("end").innerHTML = "Selamat Datang!";
+            }
+        },1000);
+})
+    </script>
+</body>
+</html>

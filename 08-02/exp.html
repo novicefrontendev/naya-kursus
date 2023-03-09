@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="show-data"></pre>
+    <div>
+        Search Box <input type="text" id="key">
+        <button id="button">Search</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        const data = `{
+            "id": 10,
+            "title": "HP Pavilion 15-DK1056WM",
+            "description": "HP Pavilion 15-DK1056WM Gaming...",
+            "price": 1099,
+            "discountPercentage": 6.18,
+            "rating": 4.43,
+            "stock": 89,
+            "brand": "HP Pavilion",
+            "category": "laptops",
+            "thumbnail": "https://i.dummyjson.com/data/products/10/thumbnail.jpeg",
+            "images": [
+              "https://i.dummyjson.com/data/products/10/1.jpg",
+              "https://i.dummyjson.com/data/products/10/2.jpg",
+              "https://i.dummyjson.com/data/products/10/3.jpg",
+              "https://i.dummyjson.com/data/products/10/thumbnail.jpeg"
+            ],
+            "nama" : {
+                "firstName" : "Adli",
+                "lastName"  : "Rahadyan"
+            }
+        }`
+
+        // Show Data
+        const convertJSON = JSON.parse(data);
+        const show = document.getElementById('show-data');
+        show.textContent = data;
+
+        
+        let key = document.querySelector('#key');
+        let button = document.querySelector('#button');
+        
+        let hasil = document.querySelector('#result')
+        let val = document.createElement('h1')
+        hasil.appendChild(val)
+
+        function searchJSON() {
+            if(key.value in convertJSON) {
+                val.innerText = convertJSON[key.value]
+                
+            } else {
+                val.innerText = '...'
+            }
+        }
+
+        val.innerText = '...'
+
+        // button.addEventListener('click', searchJSON)
+        key.addEventListener('keyup', searchJSON );
+    </script>
+</body>
+</html>

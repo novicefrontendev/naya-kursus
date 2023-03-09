@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Search Box <input type="text" id="key">
+        <button id="sb">Search</button>
+    </div>
+    <script>
+        let identitas = {
+            nama: 'Adli',
+            asal: 'Yogyakarta',
+            alamat: 'Jl. Timoho'
+        };
+        let key = document.getElementById('key')
+        let button = document.getElementById('sb');
+
+        function searchFun() {
+            if (key.value in identitas) {
+                document.write(identitas[key.value])
+            } 
+            else {
+                document.write("<b>Element " + (key.value) + " Not Found</b>"  )
+            }
+        }
+
+        button.addEventListener('click', searchFun)
+    </script>
+</body>
+</html>
